@@ -1,0 +1,61 @@
+interaction_id,customer_utterance,true_contact_reason
+CH-001,"hey my guy was a no show, been sitting here since 8",MISSED_TECH_NOSHOW
+CH-002,the 1-3pm window came and went with nobody,MISSED_TECH_NOSHOW
+CH-003,i stayed home from work for nothing. where was your tech?,MISSED_TECH_NOSHOW
+CH-004,technician skipped my house today,MISSED_TECH_NOSHOW
+CH-005,appointment was today and no one ever came,MISSED_TECH_NOSHOW
+CH-006,why didnt anyone show for my install,MISSED_TECH_NOSHOW
+CH-007,"your tech stood me up, I want someone out here asap",MISSED_TECH_NOSHOW
+CH-008,its 5pm and still no technician,MISSED_TECH_NOSHOW
+CH-009,nobody showed. this is the second time,MISSED_TECH_NOSHOW
+CH-010,tech never called never came,MISSED_TECH_NOSHOW
+CH-011,can we do friday instead of wednesday,RESCHEDULE
+CH-012,need to bump my service call to next month,RESCHEDULE
+CH-013,I have a conflict with my appointment time,RESCHEDULE
+CH-014,any openings sooner than the 14th?,RESCHEDULE
+CH-015,want a morning slot not afternoon,RESCHEDULE
+CH-016,my work schedule changed so i need a new appointment,RESCHEDULE
+CH-017,can the install happen on the weekend,RESCHEDULE
+CH-018,I'll be traveling that day. different date please,RESCHEDULE
+CH-019,reschedual my repair,RESCHEDULE
+CH-020,could you shift my visit by a couple of days,RESCHEDULE
+CH-021,emergency at work can't make it tomorrow,RESCHEDULE
+CH-022,need to change appt,RESCHEDULE
+CH-023,"i stepped out for 10 min and the tech left, can he come back",MISSED_CUSTOMER_NOT_HOME
+CH-024,i was in the shower and missed the tech at the door,MISSED_CUSTOMER_NOT_HOME
+CH-025,found a door tag saying sorry we missed you,MISSED_CUSTOMER_NOT_HOME
+CH-026,i got stuck in traffic and missed the appointment,MISSED_CUSTOMER_NOT_HOME
+CH-027,the technician came early before i got home,MISSED_CUSTOMER_NOT_HOME
+CH-028,i didnt hear the doorbell and the guy left,MISSED_CUSTOMER_NOT_HOME
+CH-029,my phone was dead when the tech called,MISSED_CUSTOMER_NOT_HOME
+CH-030,missed my repair visit this morning my fault,MISSED_CUSTOMER_NOT_HOME
+CH-031,is the technician running late?,ETA_STATUS
+CH-032,any update on when the tech gets here,ETA_STATUS
+CH-033,what's the arrival time for my install,ETA_STATUS
+CH-034,how long until the tech arrives,ETA_STATUS
+CH-035,do I still have an appointment tomorrow,ETA_STATUS
+CH-036,track my technician,ETA_STATUS
+CH-037,when will my repair guy get here,ETA_STATUS
+CH-038,can you check if my appointment is confirmed,ETA_STATUS
+CH-039,is today's visit still happening,ETA_STATUS
+CH-040,what window is my tech scheduled for,ETA_STATUS
+CH-041,i dont want the appointment anymore,CANCEL
+CH-042,please remove my service appointment,CANCEL
+CH-043,call off the tech visit,CANCEL
+CH-044,the issue resolved itself so no visit needed,CANCEL
+CH-045,i'm switching providers so drop the install,CANCEL
+CH-046,kill the appointment,CANCEL
+CH-047,tell the tech to use the side entrance,ACCESS_UPDATE
+CH-048,the gate code changed to 4471,ACCESS_UPDATE
+CH-049,please have the tech text before arriving,ACCESS_UPDATE
+CH-050,apartment 4B buzz twice,ACCESS_UPDATE
+CH-051,new mobile number for the appointment is on file can you update,ACCESS_UPDATE
+CH-052,we have a large dog so knock loudly,ACCESS_UPDATE
+CH-053,use the back alley there is no street parking,ACCESS_UPDATE
+CH-054,the tech should ring my neighbor if I'm not answering,ACCESS_UPDATE
+CH-055,i missed the tech and need a new time this week,MISSED_CUSTOMER_NOT_HOME
+CH-056,tech didn't show and now I need to reschedule,MISSED_TECH_NOSHOW
+CH-057,where is the technician? window ended an hour ago,MISSED_TECH_NOSHOW
+CH-058,my appointment,NEEDS_REVIEW
+CH-059,help with technician,NEEDS_REVIEW
+CH-060,appointment problem,NEEDS_REVIEW

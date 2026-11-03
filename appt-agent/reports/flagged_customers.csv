@@ -1,0 +1,463 @@
+customer_id,contacts,digital_failures,reasons,intent,last_contact,still_unresolved
+C100256,4,4,"Same-day change locked (<24h rule) | Slot API timeout",RESCHEDULE,2026-09-30 15:59,Y
+C101589,4,4,"Unsupported intent (no missed-appt flow) | Authentication failure | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-30 10:17,Y
+C102789,4,4,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-23 18:37,N
+C103252,5,4,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-06 13:50,N
+C100517,6,4,"Bot misunderstood request | Unsupported intent (no missed-appt flow) | Tech location unavailable",MISSED_CUSTOMER_NOT_HOME,2026-09-02 12:04,N
+C101381,4,4,"Slot API timeout | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-08-31 08:30,N
+C102371,5,4,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-20 16:29,Y
+C100243,4,4,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-14 17:41,N
+C100486,4,4,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-12 07:03,Y
+C103016,4,4,"Same-day change locked (<24h rule) | Unsupported intent (no missed-appt flow) | Bot misunderstood request",RESCHEDULE,2026-07-29 17:04,Y
+C103231,4,4,"Tech location unavailable",ETA_STATUS,2026-07-27 07:11,N
+C102064,4,4,"Authentication failure | Tech location unavailable | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-18 15:19,N
+C101957,3,3,"Authentication failure | Unsupported intent (no missed-appt flow) | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-09-30 19:16,Y
+C101361,5,3,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-30 17:14,N
+C103017,3,3,"Unsupported intent (no missed-appt flow) | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-09-30 16:46,Y
+C101950,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-30 12:28,Y
+C101171,3,3,"No available slots shown | Authentication failure",RESCHEDULE,2026-09-30 12:22,Y
+C101127,4,3,"Authentication failure | Slot API timeout",MISSED_TECH_NOSHOW,2026-09-28 15:04,N
+C102670,3,3,"Bot misunderstood request | No available slots shown | Tech location unavailable",MISSED_CUSTOMER_NOT_HOME,2026-09-28 09:04,N
+C103281,4,3,"Unsupported intent (no missed-appt flow) | Free-text notes not supported",MISSED_CUSTOMER_NOT_HOME,2026-09-26 18:11,Y
+C101787,4,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-09-26 16:37,N
+C103210,3,3,"Same-day change locked (<24h rule) | Slot API timeout",RESCHEDULE,2026-09-24 17:30,Y
+C100950,6,3,"Bot misunderstood request | Tech location unavailable | No available slots shown",MISSED_TECH_NOSHOW,2026-09-18 07:33,Y
+C101386,3,3,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-17 10:46,N
+C101166,4,3,"Authentication failure | Bot misunderstood request | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-17 09:04,N
+C100421,4,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-15 15:32,Y
+C101041,4,3,"Authentication failure | Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-14 11:31,N
+C100790,3,3,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-12 19:54,N
+C102245,3,3,"Tech location unavailable | Slot API timeout | Bot misunderstood request",ETA_STATUS,2026-09-12 14:47,N
+C101284,4,3,"Tech location unavailable | Order-linked appt (cancel blocked) | Authentication failure",ETA_STATUS,2026-09-12 14:38,N
+C101223,3,3,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-12 12:25,Y
+C103184,3,3,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_CUSTOMER_NOT_HOME,2026-09-11 08:23,N
+C101606,3,3,"Order-linked appt (cancel blocked)",CANCEL,2026-09-10 09:52,N
+C101913,3,3,"Free-text notes not supported",ACCESS_UPDATE,2026-09-09 08:46,Y
+C101578,4,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-09 08:38,N
+C100357,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-09 07:58,N
+C101393,3,3,"Unsupported intent (no missed-appt flow) | Free-text notes not supported",MISSED_CUSTOMER_NOT_HOME,2026-09-08 07:19,Y
+C100419,4,3,"Authentication failure | Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-04 15:37,Y
+C101661,3,3,"Bot misunderstood request | Authentication failure",MISSED_CUSTOMER_NOT_HOME,2026-09-04 13:17,N
+C101104,3,3,"Same-day change locked (<24h rule) | Bot misunderstood request | Authentication failure",RESCHEDULE,2026-09-01 12:11,N
+C100850,4,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-28 17:12,N
+C101387,3,3,"Same-day change locked (<24h rule) | Slot API timeout | Bot misunderstood request",RESCHEDULE,2026-08-28 17:04,N
+C102873,4,3,"Free-text notes not supported",ACCESS_UPDATE,2026-08-28 15:07,N
+C100469,3,3,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-27 09:18,N
+C100484,3,3,"Same-day change locked (<24h rule) | Tech location unavailable | Authentication failure",RESCHEDULE,2026-08-25 11:32,Y
+C101388,5,3,"Bot misunderstood request | Order-linked appt (cancel blocked) | Unsupported intent (no missed-appt flow)",CANCEL,2026-08-25 08:49,N
+C101565,3,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-24 18:34,N
+C101015,3,3,"Bot misunderstood request | Authentication failure",ETA_STATUS,2026-08-21 12:20,N
+C103258,3,3,"No available slots shown | Slot API timeout",RESCHEDULE,2026-08-20 16:40,N
+C102820,3,3,"Free-text notes not supported | Bot misunderstood request | Unsupported intent (no missed-appt flow)",ACCESS_UPDATE,2026-08-19 09:33,Y
+C101698,3,3,"Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-08-17 11:19,N
+C103077,4,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request | Tech location unavailable",MISSED_TECH_NOSHOW,2026-08-17 10:00,N
+C102757,3,3,"No available slots shown | Authentication failure | Same-day change locked (<24h rule)",RESCHEDULE,2026-08-16 07:57,N
+C101406,3,3,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-15 18:39,N
+C102831,3,3,"Bot misunderstood request | Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-13 12:47,Y
+C102016,3,3,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-08-13 07:54,Y
+C102818,5,3,"Unsupported intent (no missed-appt flow) | Slot API timeout | Tech location unavailable",MISSED_TECH_NOSHOW,2026-08-12 08:09,N
+C100385,3,3,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-11 15:36,N
+C103347,3,3,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-08-10 16:53,N
+C101530,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-08 18:08,N
+C101898,3,3,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-08 10:09,N
+C102562,3,3,"Tech location unavailable | No available slots shown | Authentication failure",ETA_STATUS,2026-08-06 19:41,N
+C100853,3,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-06 18:08,N
+C103191,4,3,"Free-text notes not supported | Bot misunderstood request | Authentication failure",ACCESS_UPDATE,2026-08-06 14:36,N
+C101287,4,3,"Same-day change locked (<24h rule) | Bot misunderstood request | No available slots shown",RESCHEDULE,2026-08-05 18:45,N
+C100062,3,3,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-05 08:50,N
+C101334,3,3,"No available slots shown | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-05 07:23,Y
+C102373,4,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-02 17:02,N
+C101524,3,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-01 15:51,Y
+C101502,3,3,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-31 16:18,Y
+C102903,3,3,"Same-day change locked (<24h rule) | Slot API timeout | No available slots shown",RESCHEDULE,2026-07-30 09:05,N
+C101790,4,3,"Bot misunderstood request | Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-07-29 11:41,N
+C101265,3,3,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-07-28 16:02,N
+C101574,3,3,"Bot misunderstood request | Same-day change locked (<24h rule) | Authentication failure",ETA_STATUS,2026-07-26 18:50,Y
+C102979,4,3,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-25 12:02,Y
+C102504,4,3,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-07-25 10:43,N
+C101640,4,3,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-23 17:22,N
+C100021,4,3,"Authentication failure | Tech location unavailable",ETA_STATUS,2026-07-23 12:23,N
+C101757,3,3,"Tech location unavailable",ETA_STATUS,2026-07-23 09:21,Y
+C100170,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-23 07:50,N
+C102337,3,3,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-22 17:01,N
+C101673,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-19 12:21,Y
+C101038,3,3,"Tech location unavailable | Bot misunderstood request | Unsupported intent (no missed-appt flow)",ETA_STATUS,2026-07-18 12:55,N
+C101656,3,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-18 09:02,N
+C101298,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-16 16:49,N
+C101528,3,3,"Slot API timeout | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-07-14 17:22,Y
+C102273,3,3,"Bot misunderstood request | Tech location unavailable",ETA_STATUS,2026-07-13 18:34,N
+C102205,4,3,"Authentication failure | Free-text notes not supported | Unsupported intent (no missed-appt flow)",ACCESS_UPDATE,2026-07-12 09:19,N
+C102125,3,3,"No available slots shown | Authentication failure | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-11 13:49,N
+C102752,3,3,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-11 11:59,N
+C103198,3,3,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-11 09:24,N
+C101582,3,3,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-09 18:14,Y
+C102182,3,3,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-07 19:44,N
+C101885,2,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-09-30 19:51,N
+C101670,3,2,"Tech location unavailable",ETA_STATUS,2026-09-30 18:57,Y
+C101404,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-30 16:44,N
+C100216,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-30 16:38,Y
+C101678,3,2,"Slot API timeout | Bot misunderstood request",RESCHEDULE,2026-09-30 16:24,N
+C102842,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-30 16:11,N
+C102278,2,2,"Authentication failure | Bot misunderstood request",CANCEL,2026-09-30 15:35,N
+C100835,2,2,"Tech location unavailable",ETA_STATUS,2026-09-30 12:53,Y
+C102222,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-30 12:24,N
+C103317,2,2,"Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-09-30 12:16,Y
+C102342,2,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-30 10:48,Y
+C102317,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-30 10:05,N
+C102458,2,2,"Authentication failure | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-09-30 09:16,Y
+C102133,2,2,"No available slots shown | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-30 08:29,N
+C102398,2,2,"Bot misunderstood request | Slot API timeout",RESCHEDULE,2026-09-30 08:02,Y
+C102388,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-29 19:23,N
+C102741,3,2,"Bot misunderstood request | Same-day change locked (<24h rule)",MISSED_CUSTOMER_NOT_HOME,2026-09-29 19:20,N
+C100019,4,2,"Tech location unavailable | Unsupported intent (no missed-appt flow)",ETA_STATUS,2026-09-29 17:49,N
+C102589,2,2,"Unsupported intent (no missed-appt flow) | Slot API timeout",MISSED_TECH_NOSHOW,2026-09-29 16:50,N
+C101745,4,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-29 10:08,Y
+C100438,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-28 13:11,Y
+C101180,5,2,"No available slots shown",RESCHEDULE,2026-09-28 12:56,N
+C102123,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-27 15:51,N
+C100729,2,2,"Bot misunderstood request | Tech location unavailable",ETA_STATUS,2026-09-27 11:02,N
+C100552,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-27 10:39,N
+C100355,4,2,"Authentication failure | Tech location unavailable",ETA_STATUS,2026-09-27 09:20,N
+C100493,3,2,"Tech location unavailable",ETA_STATUS,2026-09-27 08:24,N
+C102636,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-26 09:41,N
+C100778,2,2,"Tech location unavailable",ETA_STATUS,2026-09-25 18:59,N
+C100099,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-25 10:39,Y
+C100609,3,2,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-25 09:25,Y
+C101083,2,2,"Bot misunderstood request | Free-text notes not supported",ACCESS_UPDATE,2026-09-24 19:06,N
+C100224,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-24 14:46,Y
+C100202,2,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-24 14:41,Y
+C103393,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-24 11:06,N
+C100771,2,2,"Authentication failure",ACCESS_UPDATE,2026-09-24 09:16,Y
+C101255,2,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-09-24 08:25,N
+C101664,2,2,"Bot misunderstood request | Authentication failure",MISSED_CUSTOMER_NOT_HOME,2026-09-23 19:42,N
+C100235,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-23 19:07,N
+C101105,3,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-23 11:57,N
+C102484,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-23 09:39,N
+C103336,3,2,"Free-text notes not supported",ACCESS_UPDATE,2026-09-22 15:12,N
+C102489,3,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-21 19:25,N
+C100198,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-21 18:14,N
+C101506,2,2,"Slot API timeout | Bot misunderstood request",RESCHEDULE,2026-09-21 17:26,Y
+C101917,2,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-09-21 15:17,Y
+C102631,2,2,"Slot API timeout | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-09-21 15:03,N
+C103264,2,2,"No available slots shown | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-09-21 14:28,N
+C100721,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-21 13:36,N
+C103094,5,2,"Authentication failure | No available slots shown",CANCEL,2026-09-20 12:08,N
+C100922,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-20 12:00,Y
+C100560,2,2,"No available slots shown | Authentication failure",RESCHEDULE,2026-09-20 10:22,N
+C102809,2,2,"Authentication failure | Tech location unavailable",ETA_STATUS,2026-09-20 07:30,N
+C103374,2,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-19 12:57,N
+C101134,2,2,"Bot misunderstood request",ETA_STATUS,2026-09-19 12:43,N
+C103240,2,2,"Slot API timeout",RESCHEDULE,2026-09-18 18:33,N
+C102588,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-18 14:22,Y
+C100514,3,2,"Bot misunderstood request | No available slots shown",RESCHEDULE,2026-09-18 12:45,N
+C102683,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-18 11:50,Y
+C102044,4,2,"Bot misunderstood request",ETA_STATUS,2026-09-18 07:47,N
+C102480,3,2,"Tech location unavailable | Authentication failure",ETA_STATUS,2026-09-18 07:40,N
+C100321,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-17 18:48,N
+C100231,2,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-17 17:45,N
+C100596,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-17 11:31,Y
+C101978,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-17 10:08,N
+C101283,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-17 09:22,Y
+C101624,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-17 09:13,N
+C102669,2,2,"No available slots shown",RESCHEDULE,2026-09-17 07:52,Y
+C102531,4,2,"Bot misunderstood request | Tech location unavailable",MISSED_TECH_NOSHOW,2026-09-17 07:10,N
+C102246,2,2,"Bot misunderstood request | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-09-16 13:37,Y
+C100316,3,2,"No available slots shown",RESCHEDULE,2026-09-16 11:13,Y
+C102277,4,2,"Free-text notes not supported | Authentication failure",ACCESS_UPDATE,2026-09-16 10:27,Y
+C100075,3,2,"Tech location unavailable",ETA_STATUS,2026-09-16 09:59,N
+C102334,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-16 09:02,N
+C102375,2,2,"Bot misunderstood request | No available slots shown",ETA_STATUS,2026-09-15 19:01,N
+C101685,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-15 17:53,N
+C103126,4,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-15 14:53,N
+C101724,2,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-09-15 10:55,N
+C100325,2,2,"No available slots shown | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-09-15 08:40,N
+C100919,2,2,"No available slots shown",RESCHEDULE,2026-09-14 19:53,N
+C100636,3,2,"Bot misunderstood request | Tech location unavailable",ETA_STATUS,2026-09-14 13:49,N
+C102025,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-14 13:03,N
+C100972,3,2,"Order-linked appt (cancel blocked)",CANCEL,2026-09-14 10:00,N
+C100238,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-14 08:04,N
+C102279,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-14 07:46,Y
+C103295,2,2,"Tech location unavailable",ETA_STATUS,2026-09-14 07:15,Y
+C103246,2,2,"Tech location unavailable",ETA_STATUS,2026-09-13 19:06,Y
+C100105,3,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-12 18:32,Y
+C101457,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-12 18:03,Y
+C103181,2,2,"Order-linked appt (cancel blocked)",CANCEL,2026-09-12 16:20,N
+C102257,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-12 14:17,Y
+C102455,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-12 09:43,Y
+C100159,2,2,"Authentication failure | Order-linked appt (cancel blocked)",CANCEL,2026-09-11 10:46,N
+C102762,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-11 08:45,Y
+C100714,2,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-09-10 16:17,Y
+C100756,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-10 16:05,N
+C101193,2,2,"Slot API timeout",RESCHEDULE,2026-09-10 10:59,Y
+C101549,2,2,"Free-text notes not supported",ACCESS_UPDATE,2026-09-10 08:58,N
+C100657,2,2,"Order-linked appt (cancel blocked) | Authentication failure",CANCEL,2026-09-09 18:42,N
+C101299,2,2,"Same-day change locked (<24h rule)",RESCHEDULE,2026-09-09 14:10,N
+C102866,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-09 13:56,Y
+C100102,3,2,"Authentication failure",ACCESS_UPDATE,2026-09-09 13:20,N
+C100392,2,2,"Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-09-09 10:59,Y
+C102700,2,2,"No available slots shown | Same-day change locked (<24h rule)",RESCHEDULE,2026-09-09 10:54,N
+C102052,3,2,"Bot misunderstood request | Tech location unavailable",RESCHEDULE,2026-09-09 09:25,N
+C100663,2,2,"Slot API timeout | Free-text notes not supported",RESCHEDULE,2026-09-08 11:20,Y
+C102667,3,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-08 08:45,N
+C101691,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-08 07:47,Y
+C102115,2,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-09-07 11:07,N
+C102386,2,2,"Tech location unavailable",ETA_STATUS,2026-09-07 07:00,N
+C102290,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-06 18:03,N
+C100400,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-06 16:25,Y
+C102251,2,2,"Unsupported intent (no missed-appt flow) | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-09-06 15:25,N
+C102213,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-09-06 15:03,Y
+C100699,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-09-06 14:14,Y
+C101183,3,2,"Bot misunderstood request | Same-day change locked (<24h rule)",MISSED_TECH_NOSHOW,2026-09-06 14:13,N
+C103313,4,2,"Tech location unavailable",ETA_STATUS,2026-09-05 13:23,N
+C101220,2,2,"Same-day change locked (<24h rule) | Slot API timeout",RESCHEDULE,2026-09-05 11:48,N
+C102621,2,2,"Same-day change locked (<24h rule) | Authentication failure",RESCHEDULE,2026-09-04 19:11,Y
+C100127,2,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-04 07:25,Y
+C102310,2,2,"Authentication failure | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-03 16:03,N
+C103232,5,2,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-09-03 13:13,N
+C101846,5,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-03 12:55,N
+C102764,3,2,"No available slots shown",RESCHEDULE,2026-09-02 19:43,N
+C100932,3,2,"Bot misunderstood request | Authentication failure",ETA_STATUS,2026-09-02 19:43,N
+C100342,2,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-09-02 19:26,N
+C101760,2,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-09-02 16:52,N
+C100638,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-09-01 11:51,Y
+C100253,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-09-01 09:16,N
+C100635,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-31 07:02,N
+C101163,2,2,"Slot API timeout | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-08-30 19:47,Y
+C100676,4,2,"Authentication failure | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-30 19:42,Y
+C100055,4,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-30 19:29,N
+C102936,2,2,"Slot API timeout | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-08-30 13:41,N
+C101245,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-30 11:47,N
+C101261,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-30 11:25,N
+C100352,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-30 09:25,Y
+C102878,2,2,"Tech location unavailable | Authentication failure",ETA_STATUS,2026-08-30 07:49,Y
+C102131,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-29 18:48,Y
+C100532,2,2,"Authentication failure",ACCESS_UPDATE,2026-08-29 16:21,N
+C100522,2,2,"Free-text notes not supported",ACCESS_UPDATE,2026-08-29 12:11,N
+C102358,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-08-28 19:56,N
+C101706,2,2,"Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-28 10:47,Y
+C100733,2,2,"Unsupported intent (no missed-appt flow) | Tech location unavailable",MISSED_TECH_NOSHOW,2026-08-27 10:59,N
+C103038,2,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-08-26 13:16,Y
+C100664,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-26 11:17,N
+C103116,2,2,"No available slots shown | Authentication failure",MISSED_CUSTOMER_NOT_HOME,2026-08-26 10:04,N
+C102326,2,2,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-08-26 09:28,N
+C103244,2,2,"No available slots shown",RESCHEDULE,2026-08-25 12:31,N
+C101563,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-25 09:22,N
+C102916,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-24 17:15,N
+C102565,2,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-08-24 07:30,N
+C102528,2,2,"Authentication failure | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-23 18:10,Y
+C101571,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-23 16:25,N
+C103113,2,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-08-23 16:19,N
+C102505,2,2,"Slot API timeout",RESCHEDULE,2026-08-23 15:42,N
+C100867,2,2,"Slot API timeout",RESCHEDULE,2026-08-23 08:02,N
+C100297,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-08-22 19:31,N
+C100364,2,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-08-22 18:46,N
+C102211,3,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-22 18:32,N
+C101112,3,2,"Slot API timeout",RESCHEDULE,2026-08-22 17:19,N
+C101128,2,2,"Slot API timeout",RESCHEDULE,2026-08-22 17:09,N
+C100050,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-22 13:29,N
+C101611,2,2,"Tech location unavailable",ETA_STATUS,2026-08-22 12:28,Y
+C102754,2,2,"Bot misunderstood request",ETA_STATUS,2026-08-22 11:11,Y
+C101576,3,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-22 09:45,N
+C100380,2,2,"Tech location unavailable",ETA_STATUS,2026-08-22 09:32,N
+C101297,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-22 07:53,N
+C100809,3,2,"Slot API timeout | Authentication failure",RESCHEDULE,2026-08-22 07:39,Y
+C100742,3,2,"No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-08-22 07:34,N
+C102300,2,2,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-08-21 19:46,N
+C100028,2,2,"Bot misunderstood request",ETA_STATUS,2026-08-21 15:44,Y
+C103367,2,2,"Bot misunderstood request | Free-text notes not supported",ACCESS_UPDATE,2026-08-21 15:15,N
+C103068,4,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-21 13:16,N
+C103141,2,2,"Tech location unavailable",ETA_STATUS,2026-08-21 10:02,Y
+C103159,2,2,"Slot API timeout",RESCHEDULE,2026-08-21 09:52,Y
+C100615,2,2,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-08-21 08:38,Y
+C101031,2,2,"Unsupported intent (no missed-appt flow) | Slot API timeout",MISSED_TECH_NOSHOW,2026-08-21 07:11,N
+C101033,2,2,"Slot API timeout | No available slots shown",RESCHEDULE,2026-08-20 18:11,N
+C100938,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-20 14:29,Y
+C100772,2,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-20 13:00,N
+C103148,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-20 08:44,N
+C102769,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-08-20 07:43,Y
+C102557,3,2,"Bot misunderstood request | Free-text notes not supported",ACCESS_UPDATE,2026-08-20 07:13,N
+C102845,2,2,"Bot misunderstood request",ETA_STATUS,2026-08-19 14:31,Y
+C103342,3,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-19 07:30,N
+C103301,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_CUSTOMER_NOT_HOME,2026-08-18 19:15,N
+C102978,3,2,"Authentication failure | Bot misunderstood request",ETA_STATUS,2026-08-18 17:55,N
+C103303,3,2,"Unsupported intent (no missed-appt flow) | Slot API timeout",MISSED_TECH_NOSHOW,2026-08-18 15:27,N
+C100982,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-18 09:45,N
+C102582,3,2,"Unsupported intent (no missed-appt flow) | Tech location unavailable",MISSED_TECH_NOSHOW,2026-08-18 09:06,Y
+C100738,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-18 08:42,Y
+C103160,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-18 07:34,Y
+C101918,3,2,"Unsupported intent (no missed-appt flow) | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-08-17 18:04,Y
+C100942,2,2,"Bot misunderstood request",ACCESS_UPDATE,2026-08-17 10:57,N
+C102013,2,2,"Authentication failure | Slot API timeout",RESCHEDULE,2026-08-17 10:10,N
+C100211,2,2,"Bot misunderstood request | Slot API timeout",RESCHEDULE,2026-08-17 09:15,N
+C101592,2,2,"No available slots shown | Same-day change locked (<24h rule)",MISSED_CUSTOMER_NOT_HOME,2026-08-16 15:56,N
+C101244,4,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-16 15:33,N
+C100735,2,2,"Authentication failure | No available slots shown",RESCHEDULE,2026-08-16 13:57,N
+C101818,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-16 12:09,N
+C103272,3,2,"Authentication failure | No available slots shown",RESCHEDULE,2026-08-16 09:31,Y
+C101219,2,2,"Bot misunderstood request",ETA_STATUS,2026-08-15 18:43,N
+C101651,2,2,"Free-text notes not supported",ACCESS_UPDATE,2026-08-15 16:15,Y
+C102309,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-15 15:48,N
+C100813,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-15 15:21,N
+C100836,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-15 08:42,N
+C100686,2,2,"Same-day change locked (<24h rule) | Authentication failure",RESCHEDULE,2026-08-14 08:42,N
+C102130,4,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-08-12 15:33,N
+C101533,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-12 15:32,Y
+C100817,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-11 12:52,N
+C102396,2,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-08-10 15:01,N
+C103130,2,2,"Slot API timeout | No available slots shown",RESCHEDULE,2026-08-10 14:26,Y
+C103027,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-08-10 14:13,N
+C102732,2,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-10 12:19,N
+C101189,2,2,"Tech location unavailable",ETA_STATUS,2026-08-10 12:17,N
+C103169,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-08-10 09:20,Y
+C100479,3,2,"No available slots shown | Authentication failure",RESCHEDULE,2026-08-10 07:27,N
+C102532,2,2,"Bot misunderstood request",CANCEL,2026-08-09 12:01,N
+C102907,4,2,"Unsupported intent (no missed-appt flow) | Same-day change locked (<24h rule)",MISSED_TECH_NOSHOW,2026-08-09 07:39,N
+C100286,3,2,"Order-linked appt (cancel blocked) | Bot misunderstood request",CANCEL,2026-08-08 19:19,N
+C101639,4,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-08 16:05,N
+C100314,2,2,"Authentication failure",MISSED_TECH_NOSHOW,2026-08-08 15:43,Y
+C102485,3,2,"Authentication failure | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-08 12:10,N
+C101981,3,2,"Order-linked appt (cancel blocked) | Authentication failure",CANCEL,2026-08-08 10:34,N
+C103201,2,2,"Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-08-08 09:08,N
+C101074,2,2,"Same-day change locked (<24h rule)",RESCHEDULE,2026-08-08 07:41,Y
+C100746,2,2,"Authentication failure | No available slots shown",MISSED_TECH_NOSHOW,2026-08-07 16:09,Y
+C102082,2,2,"Order-linked appt (cancel blocked) | Authentication failure",CANCEL,2026-08-07 12:58,N
+C101155,2,2,"No available slots shown | Same-day change locked (<24h rule)",RESCHEDULE,2026-08-06 19:05,N
+C100137,4,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-06 13:02,N
+C101228,2,2,"No available slots shown",RESCHEDULE,2026-08-06 11:36,N
+C100418,2,2,"No available slots shown",RESCHEDULE,2026-08-06 10:33,N
+C102756,4,2,"Bot misunderstood request | No available slots shown",RESCHEDULE,2026-08-06 09:01,N
+C102462,2,2,"Bot misunderstood request",ETA_STATUS,2026-08-05 18:01,Y
+C102416,2,2,"Order-linked appt (cancel blocked) | Bot misunderstood request",CANCEL,2026-08-05 11:47,Y
+C101825,3,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-05 11:19,Y
+C102659,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-04 14:16,N
+C102114,4,2,"No available slots shown | Authentication failure",RESCHEDULE,2026-08-04 12:47,N
+C101983,3,2,"Tech location unavailable | Authentication failure",ETA_STATUS,2026-08-04 10:24,N
+C100535,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-04 09:17,N
+C101232,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-04 07:03,N
+C102800,2,2,"Authentication failure | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-08-03 17:01,Y
+C100625,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-03 09:01,Y
+C102539,3,2,"Tech location unavailable",ETA_STATUS,2026-08-03 08:06,N
+C102056,2,2,"No available slots shown | Order-linked appt (cancel blocked)",RESCHEDULE,2026-08-02 08:35,Y
+C100518,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-08-01 18:29,Y
+C102745,3,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-08-01 15:50,N
+C101335,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-08-01 12:46,N
+C101860,2,2,"Authentication failure | No available slots shown",MISSED_TECH_NOSHOW,2026-08-01 12:37,N
+C100477,2,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-08-01 10:13,N
+C101389,2,2,"Authentication failure | No available slots shown",CANCEL,2026-07-31 17:34,Y
+C103217,2,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-07-30 18:02,N
+C102731,3,2,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-30 16:48,N
+C102968,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-30 14:28,Y
+C103189,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-07-30 13:11,N
+C102712,2,2,"Authentication failure | Free-text notes not supported",ACCESS_UPDATE,2026-07-30 12:01,N
+C101911,4,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-29 19:50,N
+C103228,2,2,"Slot API timeout | No available slots shown",RESCHEDULE,2026-07-29 15:57,Y
+C103180,3,2,"No available slots shown | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-29 15:03,N
+C102704,2,2,"Bot misunderstood request",ETA_STATUS,2026-07-29 13:46,Y
+C101496,2,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-07-29 09:47,N
+C103074,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-29 08:13,N
+C101889,3,2,"Free-text notes not supported | Unsupported intent (no missed-appt flow)",ACCESS_UPDATE,2026-07-29 07:12,N
+C101517,3,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-07-28 16:42,N
+C100093,3,2,"No available slots shown | Authentication failure",RESCHEDULE,2026-07-28 16:38,N
+C102574,4,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-07-28 09:25,N
+C103389,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-28 08:44,Y
+C103319,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-27 17:12,Y
+C101014,2,2,"Tech location unavailable",ETA_STATUS,2026-07-26 19:14,N
+C101314,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-07-26 14:23,N
+C103242,4,2,"Tech location unavailable",ETA_STATUS,2026-07-25 15:38,N
+C101842,3,2,"Unsupported intent (no missed-appt flow) | Tech location unavailable",MISSED_TECH_NOSHOW,2026-07-25 11:22,N
+C102569,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-25 11:20,Y
+C100306,3,2,"Bot misunderstood request | Free-text notes not supported",ACCESS_UPDATE,2026-07-25 07:10,N
+C102048,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-24 18:19,Y
+C101895,3,2,"Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-24 17:14,N
+C102971,2,2,"Slot API timeout | Order-linked appt (cancel blocked)",RESCHEDULE,2026-07-24 17:03,N
+C102935,3,2,"Bot misunderstood request",ETA_STATUS,2026-07-24 16:33,N
+C100978,4,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-07-23 19:07,Y
+C100089,3,2,"No available slots shown | Order-linked appt (cancel blocked)",MISSED_CUSTOMER_NOT_HOME,2026-07-23 18:48,N
+C100005,2,2,"Same-day change locked (<24h rule) | Slot API timeout",RESCHEDULE,2026-07-23 13:58,Y
+C102570,2,2,"Slot API timeout | No available slots shown",RESCHEDULE,2026-07-23 13:10,Y
+C101376,3,2,"Free-text notes not supported",ACCESS_UPDATE,2026-07-22 19:38,N
+C100394,2,2,"No available slots shown | Slot API timeout",RESCHEDULE,2026-07-22 18:09,N
+C101442,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-22 13:02,Y
+C102722,3,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-07-22 11:58,Y
+C102613,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-22 07:25,Y
+C102946,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-22 07:09,N
+C102185,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-21 14:27,Y
+C102587,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-21 14:18,Y
+C103190,4,2,"Bot misunderstood request | No available slots shown",MISSED_TECH_NOSHOW,2026-07-21 13:46,N
+C101084,2,2,"No available slots shown",RESCHEDULE,2026-07-21 13:24,Y
+C100116,2,2,"Bot misunderstood request",ACCESS_UPDATE,2026-07-21 12:15,Y
+C101082,5,2,"No available slots shown | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-20 19:47,N
+C100510,3,2,"Tech location unavailable",ETA_STATUS,2026-07-20 15:54,Y
+C102372,2,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-07-20 08:02,Y
+C102393,2,2,"Bot misunderstood request | Tech location unavailable",ETA_STATUS,2026-07-19 12:50,N
+C102917,3,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-07-19 10:50,N
+C101262,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-19 08:18,N
+C101504,3,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-18 16:33,N
+C101303,2,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-07-18 15:37,N
+C101910,3,2,"Tech location unavailable",ETA_STATUS,2026-07-18 14:32,N
+C102149,3,2,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-18 09:48,Y
+C101642,2,2,"Order-linked appt (cancel blocked) | Slot API timeout",CANCEL,2026-07-17 16:51,N
+C100656,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-17 16:33,N
+C101432,2,2,"Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-17 13:47,N
+C103305,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-17 13:08,N
+C100864,2,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-17 12:41,N
+C103329,2,2,"Free-text notes not supported | Authentication failure",ACCESS_UPDATE,2026-07-17 09:15,Y
+C101050,2,2,"No available slots shown",RESCHEDULE,2026-07-16 18:14,Y
+C101852,2,2,"Order-linked appt (cancel blocked)",CANCEL,2026-07-16 17:57,N
+C103040,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-16 12:00,Y
+C101172,3,2,"Bot misunderstood request | Authentication failure",CANCEL,2026-07-16 07:03,Y
+C100880,3,2,"Same-day change locked (<24h rule) | Authentication failure",RESCHEDULE,2026-07-15 19:27,N
+C100120,3,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-15 18:25,N
+C101777,5,2,"Free-text notes not supported | Authentication failure",ACCESS_UPDATE,2026-07-15 17:18,N
+C100427,3,2,"Slot API timeout",RESCHEDULE,2026-07-15 15:18,N
+C101806,3,2,"Unsupported intent (no missed-appt flow) | Same-day change locked (<24h rule)",MISSED_CUSTOMER_NOT_HOME,2026-07-15 08:51,N
+C103386,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-15 08:14,N
+C102940,2,2,"Same-day change locked (<24h rule) | Slot API timeout",RESCHEDULE,2026-07-14 07:17,Y
+C101175,2,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-13 16:41,Y
+C100703,3,2,"Slot API timeout | Same-day change locked (<24h rule)",RESCHEDULE,2026-07-13 16:00,N
+C101501,3,2,"Authentication failure | No available slots shown",RESCHEDULE,2026-07-13 14:13,Y
+C103333,2,2,"Authentication failure | Bot misunderstood request",ETA_STATUS,2026-07-13 11:30,N
+C101141,2,2,"Same-day change locked (<24h rule) | Bot misunderstood request",RESCHEDULE,2026-07-13 08:29,N
+C102491,2,2,"Authentication failure | Bot misunderstood request",ACCESS_UPDATE,2026-07-12 16:57,N
+C101247,2,2,"No available slots shown | Same-day change locked (<24h rule)",RESCHEDULE,2026-07-12 13:33,N
+C100222,4,2,"Authentication failure | No available slots shown",MISSED_CUSTOMER_NOT_HOME,2026-07-12 13:12,N
+C100373,2,2,"No available slots shown | Bot misunderstood request",RESCHEDULE,2026-07-12 12:53,N
+C100706,3,2,"Authentication failure | Bot misunderstood request",RESCHEDULE,2026-07-12 10:31,N
+C100811,3,2,"Bot misunderstood request | Authentication failure",ETA_STATUS,2026-07-12 09:08,N
+C102773,2,2,"Free-text notes not supported | Bot misunderstood request",ACCESS_UPDATE,2026-07-11 17:55,Y
+C102867,2,2,"Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-11 08:48,N
+C101192,2,2,"Order-linked appt (cancel blocked)",CANCEL,2026-07-11 07:13,Y
+C103304,2,2,"No available slots shown",RESCHEDULE,2026-07-10 19:57,Y
+C102970,2,2,"Free-text notes not supported",ACCESS_UPDATE,2026-07-10 18:04,Y
+C101878,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-10 16:45,Y
+C102770,5,2,"Unsupported intent (no missed-appt flow) | Bot misunderstood request",MISSED_TECH_NOSHOW,2026-07-10 15:07,N
+C100428,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-10 14:49,Y
+C100520,2,2,"Tech location unavailable",ETA_STATUS,2026-07-10 07:44,Y
+C100723,2,2,"Free-text notes not supported",ACCESS_UPDATE,2026-07-09 15:39,N
+C101330,3,2,"Tech location unavailable | Bot misunderstood request",ETA_STATUS,2026-07-09 15:14,N
+C102494,2,2,"Slot API timeout | No available slots shown",RESCHEDULE,2026-07-09 13:24,N
+C102183,2,2,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-09 12:12,Y
+C100266,3,2,"Bot misunderstood request | No available slots shown",CANCEL,2026-07-09 12:02,N
+C101266,2,2,"Tech location unavailable",ETA_STATUS,2026-07-08 19:41,N
+C102425,3,2,"Authentication failure",ACCESS_UPDATE,2026-07-08 19:35,N
+C102530,2,2,"Bot misunderstood request",ETA_STATUS,2026-07-08 16:43,N
+C100549,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-08 14:54,N
+C101252,3,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-08 11:19,Y
+C101815,2,2,"Bot misunderstood request | Authentication failure",ACCESS_UPDATE,2026-07-08 08:06,Y
+C101377,2,2,"Bot misunderstood request | Authentication failure",ETA_STATUS,2026-07-08 08:02,N
+C100679,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-08 07:57,N
+C101720,2,2,"Unsupported intent (no missed-appt flow) | Authentication failure",MISSED_TECH_NOSHOW,2026-07-07 19:32,N
+C101703,2,2,"Bot misunderstood request | Unsupported intent (no missed-appt flow)",RESCHEDULE,2026-07-06 19:30,N
+C100303,3,2,"No available slots shown",RESCHEDULE,2026-07-06 16:47,N
+C101727,3,2,"Tech location unavailable",ETA_STATUS,2026-07-06 16:21,N
+C100173,7,2,"Same-day change locked (<24h rule) | No available slots shown",RESCHEDULE,2026-07-06 13:02,N
+C101529,2,2,"Same-day change locked (<24h rule) | Bot misunderstood request",RESCHEDULE,2026-07-06 12:50,Y
+C102229,3,2,"Order-linked appt (cancel blocked) | Unsupported intent (no missed-appt flow)",CANCEL,2026-07-06 12:41,Y
+C100931,3,2,"Slot API timeout | Authentication failure",RESCHEDULE,2026-07-06 11:48,N
+C101476,2,2,"Authentication failure | Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-06 11:48,Y
+C101693,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-05 17:34,Y
+C100119,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-05 11:30,N
+C102947,3,2,"No available slots shown | Authentication failure",RESCHEDULE,2026-07-05 11:06,N
+C100973,2,2,"Unsupported intent (no missed-appt flow)",MISSED_TECH_NOSHOW,2026-07-04 10:48,Y
+C101634,2,2,"No available slots shown | Bot misunderstood request",MISSED_CUSTOMER_NOT_HOME,2026-07-03 12:52,N
+C103392,2,2,"No available slots shown | Unsupported intent (no missed-appt flow)",MISSED_CUSTOMER_NOT_HOME,2026-07-03 12:22,Y

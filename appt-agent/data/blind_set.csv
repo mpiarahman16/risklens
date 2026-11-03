@@ -1,0 +1,41 @@
+interaction_id,customer_utterance,true_contact_reason
+BL-001,been waiting since noon and your technician is a no-show,MISSED_TECH_NOSHOW
+BL-002,"nobody came to fix my internet today, very upset",MISSED_TECH_NOSHOW
+BL-003,the tech was a no show and didnt even call,MISSED_TECH_NOSHOW
+BL-004,i waited the whole window and no technician arrived,MISSED_TECH_NOSHOW
+BL-005,no one showed up for my repair appointment,MISSED_TECH_NOSHOW
+BL-006,third time your installer hasn't shown up,MISSED_TECH_NOSHOW
+BL-007,appointment window is over and nobody is here,MISSED_TECH_NOSHOW
+BL-008,need to postpone my install until after the holidays,RESCHEDULE
+BL-009,can i get a later time on the same day,RESCHEDULE
+BL-010,i'd like to reschedule for next tuesday,RESCHEDULE
+BL-011,is there availability this saturday for my repair,RESCHEDULE
+BL-012,can't do the 8am slot anymore,RESCHEDULE
+BL-013,my kid is sick so i need to move the visit,RESCHEDULE
+BL-014,please change my technician appointment to a different week,RESCHEDULE
+BL-015,looking for an earlier date for installation,RESCHEDULE
+BL-016,i was out walking the dog and missed the technician,MISSED_CUSTOMER_NOT_HOME
+BL-017,the tech came but i wasnt home yet,MISSED_CUSTOMER_NOT_HOME
+BL-018,"sorry, i missed the appointment, overslept",MISSED_CUSTOMER_NOT_HOME
+BL-019,got a voicemail from the tech after he already left,MISSED_CUSTOMER_NOT_HOME
+BL-020,i was at the store when the technician showed up,MISSED_CUSTOMER_NOT_HOME
+BL-021,how close is my technician,ETA_STATUS
+BL-022,is my technician still coming today,ETA_STATUS
+BL-023,what time is my appointment,ETA_STATUS
+BL-024,send me the tech's eta,ETA_STATUS
+BL-025,can you see where the tech is right now,ETA_STATUS
+BL-026,is my install still scheduled for monday,ETA_STATUS
+BL-027,cancel tomorrow's visit please,CANCEL
+BL-028,i no longer need anyone to come out,CANCEL
+BL-029,don't send the technician my service is back,CANCEL
+BL-030,please call off my install appointment,CANCEL
+BL-031,want to cancel the repair since i'm moving,CANCEL
+BL-032,the tech has to enter through the garage,ACCESS_UPDATE
+BL-033,please tell the technician to call my wife's number instead,ACCESS_UPDATE
+BL-034,lockbox code for the tech is 2210,ACCESS_UPDATE
+BL-035,add a note that the doorbell doesn't work,ACCESS_UPDATE
+BL-036,update the phone number tied to my appointment,ACCESS_UPDATE
+BL-037,the technician should park in visitor parking,ACCESS_UPDATE
+BL-038,question about my visit,NEEDS_REVIEW
+BL-039,technician,NEEDS_REVIEW
+BL-040,i have an issue,NEEDS_REVIEW

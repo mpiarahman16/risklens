@@ -1,0 +1,366 @@
+<title>Appointment Resolution Console</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an operations console — summary strip on top, tabbed work areas below, one column on phones. */
+:root{
+  --bg:#f5f7f8; --panel:#ffffff; --ink:#14212b; --muted:#5b6b77; --line:#dde3e7;
+  --accent:#0b6e8a; --accent-soft:#e2f0f4; --good:#2f7d4f; --warn:#b26b00; --bad:#b3362c; --bar:#9fb1bd;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --panel:#152129; --ink:#e3eaee; --muted:#93a4b0; --line:#25343e;
+  --accent:#4cb3cf; --accent-soft:#16323c; --good:#5cbf86; --warn:#e3a33b; --bad:#ef7a6f; --bar:#4d6070; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --panel:#152129; --ink:#e3eaee; --muted:#93a4b0; --line:#25343e;
+  --accent:#4cb3cf; --accent-soft:#16323c; --good:#5cbf86; --warn:#e3a33b; --bad:#ef7a6f; --bar:#4d6070; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line)}
+h1{font-size:1.55rem;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.eyebrow{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sub{color:var(--muted);margin:2px 0 0;max-width:68ch}
+.tag{font:500 .72rem var(--mono);padding:3px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+nav{display:flex;gap:4px;overflow-x:auto;margin:16px 0;border-bottom:1px solid var(--line)}
+nav button{font:600 .9rem var(--sans);background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:10px 14px;cursor:pointer;white-space:nowrap}
+nav button[aria-selected="true"]{color:var(--ink);border-color:var(--accent)}
+nav button:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.kpi b{display:block;font-size:1.6rem;line-height:1.15;margin-top:2px}
+.kpi small{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;margin-top:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.panel h2{font-size:1.02rem;margin:0 0 2px}
+.panel p.note{color:var(--muted);margin:0 0 12px;font-size:.88rem}
+.insights{margin:0;padding-left:18px}.insights li{margin:6px 0}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.n,th.n{text-align:right}
+.pill{display:inline-block;font:500 .72rem var(--mono);padding:2px 7px;border-radius:999px}
+.pill.good{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+svg text{font-family:var(--sans)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+textarea,input[type=text],input[type=number],select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:8px 10px}
+textarea{width:100%;min-height:72px;resize:vertical}
+.btn{font:600 .88rem var(--sans);border:1px solid var(--accent);background:var(--accent);color:var(--panel);border-radius:5px;padding:8px 14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.result{margin-top:12px;padding:12px;border-radius:6px;background:var(--accent-soft)}
+.result b{font-size:1.1rem}
+code,.mono{font-family:var(--mono);font-size:.82rem}
+.cm td{text-align:center;font-family:var(--mono)} .cm td.diag{font-weight:600;color:var(--good)} .cm td.off{color:var(--bad)}
+.slider{display:grid;grid-template-columns:minmax(0,1fr) 120px 52px;gap:8px;align-items:center;font-size:.86rem;padding:4px 0;border-bottom:1px dashed var(--line)}
+.slider input{width:100%}
+.big{font-size:2rem;font-weight:700;line-height:1.1}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+footer{margin-top:28px;color:var(--muted);font-size:.82rem}
+.copybox{width:100%;font-family:var(--mono);font-size:.78rem;min-height:160px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Agentic AI · Missed &amp; rescheduled technician appointments</div>
+      <h1>Appointment Resolution Console</h1>
+      <p class="sub">Contact-reason classification, repeat-failure detection and automated performance reporting over appointment interactions. Runs entirely in the browser with no server.</p>
+    </div>
+    <span class="tag" id="dataTag">Synthetic sample · Q3 2026</span>
+  </header>
+
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" id="t-report" aria-selected="true" data-view="report">Performance report</button>
+    <button role="tab" id="t-classify" aria-selected="false" data-view="classify">Contact-reason classifier</button>
+    <button role="tab" id="t-repeat" aria-selected="false" data-view="repeat">Repeat failures</button>
+    <button role="tab" id="t-validate" aria-selected="false" data-view="validate">Validation</button>
+    <button role="tab" id="t-impact" aria-selected="false" data-view="impact">Business impact</button>
+  </nav>
+
+  <!-- REPORT -->
+  <section id="v-report" role="tabpanel">
+    <div class="row" style="justify-content:space-between">
+      <div class="row"><label for="fileIn" class="mono">Run on your own export (same CSV columns):</label><input type="file" id="fileIn" accept=".csv"></div>
+      <button class="btn ghost" id="resetData" type="button">Reload sample data</button>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid2">
+      <div class="panel"><h2>Auto-generated findings</h2><p class="note">Written by the report engine from the metrics below; refreshes when the data changes.</p><ul class="insights" id="insights"></ul></div>
+      <div class="panel"><h2>Weekly digital containment</h2><p class="note">Share of contacts resolved without an agent. Partial first and last weeks are lighter.</p><div id="weekChart"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Why self-service fails</h2><p class="note">Failed digital attempts by root cause (transferred + abandoned).</p><div id="failChart"></div></div>
+      <div class="panel"><h2>Containment by contact reason</h2><p class="note">Missed-appointment intents have no working digital path today.</p><div class="tbl" id="intentTbl"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Containment by entry channel</h2><div class="tbl" id="channelTbl"></div></div>
+      <div class="panel"><h2>Export</h2><p class="note">Copy the report as Markdown to paste into a ticket, wiki or email.</p><button class="btn" id="copyReport" type="button">Copy report as Markdown</button><span id="copyMsg" class="mono" style="margin-left:10px"></span><textarea id="reportMd" class="copybox" readonly hidden></textarea></div>
+    </div>
+  </section>
+
+  <!-- CLASSIFIER -->
+  <section id="v-classify" role="tabpanel" hidden>
+    <div class="grid2">
+      <div class="panel">
+        <h2>Try a customer message</h2>
+        <p class="note">Weighted intent rules return a reason, a confidence score and the evidence used. Below 0.45 confidence the message goes to human review instead of guessing.</p>
+        <textarea id="utt">tech was supposed to come 8-10 and nobody showed, i took the day off</textarea>
+        <div class="row" style="margin-top:8px"><button class="btn" id="runCls" type="button">Classify</button>
+          <span class="mono">Examples:</span>
+          <button class="btn ghost ex" type="button">where is my technician</button>
+          <button class="btn ghost ex" type="button">i missed the tech, got a door tag</button>
+          <button class="btn ghost ex" type="button">gate code changed to 4471</button>
+        </div>
+        <div class="result" id="clsOut"></div>
+      </div>
+      <div class="panel">
+        <h2>Batch classify</h2>
+        <p class="note">Paste one message per line; results can be copied as CSV for the routing team.</p>
+        <textarea id="batchIn" style="min-height:150px">can we do friday instead of wednesday
+nobody came to fix my internet today
+please cancel the technician visit
+how close is my technician
+appointment problem</textarea>
+        <div class="row" style="margin-top:8px"><button class="btn" id="runBatch" type="button">Classify all</button><button class="btn ghost" id="copyBatch" type="button">Copy as CSV</button><span id="batchMsg" class="mono"></span></div>
+        <div class="tbl" id="batchOut" style="margin-top:10px"></div>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:16px">
+      <h2>Classified intent mix (current dataset)</h2>
+      <p class="note">Classifier output on every interaction's first message, compared with the labeled reason.</p>
+      <div class="tbl" id="mixTbl"></div>
+    </div>
+  </section>
+
+  <!-- REPEAT -->
+  <section id="v-repeat" role="tabpanel" hidden>
+    <div class="kpis" id="repKpis"></div>
+    <div class="grid2">
+      <div class="panel"><h2>Repeat failure patterns</h2><p class="note">Consecutive failed attempts by the same customer within 7 days (first failure → next failure).</p><div class="tbl" id="patTbl"></div></div>
+      <div class="panel"><h2>Customers flagged for proactive outreach</h2><p class="note">Two or more digital failures inside 14 days. Showing the 25 most severe; <span id="chainCount"></span>.</p><div class="tbl" id="chainTbl"></div>
+        <div class="row" style="margin-top:8px"><button class="btn ghost" id="copyChains" type="button">Copy full list as CSV</button><span id="chainMsg" class="mono"></span></div></div>
+    </div>
+  </section>
+
+  <!-- VALIDATE -->
+  <section id="v-validate" role="tabpanel" hidden>
+    <div class="panel">
+      <div class="row" style="justify-content:space-between">
+        <div><h2>Classifier accuracy</h2><p class="note" style="margin:0">Choose a labeled test set. The blind set was written after the last rule change and never used for tuning.</p></div>
+        <select id="setSel" aria-label="Test set">
+          <option value="blind">Blind set · 40 new phrasings (honest test)</option>
+          <option value="holdout">Dataset holdout · 30% of interactions</option>
+          <option value="challenge">Challenge set · 60 phrasings (used for v2 error analysis)</option>
+        </select>
+      </div>
+      <div class="kpis" id="valKpis"></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Per-intent precision and recall</h2><div class="tbl" id="pcTbl"></div></div>
+      <div class="panel"><h2>Confusion matrix</h2><p class="note">Rows = true reason, columns = predicted. REV = sent to human review.</p><div class="tbl" id="cmTbl"></div></div>
+    </div>
+    <div class="panel" style="margin-top:16px"><h2>Messages the classifier did not resolve</h2><p class="note">These feed the next iteration (new rules, or the LLM fallback tier).</p><div class="tbl" id="missTbl"></div></div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="v-impact" role="tabpanel" hidden>
+    <div class="grid2">
+      <div class="panel">
+        <h2>Annual value at stake</h2>
+        <p class="note">Recomputed from the data as you change the assumptions. All inputs are illustrative.</p>
+        <div class="row" style="gap:28px">
+          <div><div class="eyebrow">Containment</div><div class="big" id="impCont"></div></div>
+          <div><div class="eyebrow">Agent transfers avoided / yr</div><div class="big" id="impTr"></div></div>
+          <div><div class="eyebrow">Net savings / yr</div><div class="big" id="impSav"></div></div>
+        </div>
+        <div style="margin-top:14px">
+          <div class="slider"><label for="aCost">Agent cost per minute ($)</label><input id="aCost" type="range" min="0.6" max="2" step="0.05"><span class="mono" id="aCostV"></span></div>
+          <div class="slider"><label for="aMult">Sample → quarter multiplier</label><input id="aMult" type="range" min="20" max="300" step="10"><span class="mono" id="aMultV"></span></div>
+          <div class="slider"><label for="aDig">AI cost per contact ($)</label><input id="aDig" type="range" min="0.05" max="1.5" step="0.05"><span class="mono" id="aDigV"></span></div>
+          <div class="slider"><label for="aScale">Scale all fix rates</label><input id="aScale" type="range" min="0.25" max="1.5" step="0.05"><span class="mono" id="aScaleV"></span></div>
+        </div>
+      </div>
+      <div class="panel"><h2>Where the value comes from</h2><p class="note">Fix rate = share of each failure type the agentic flow is expected to resolve (a pilot hypothesis).</p><div class="tbl" id="impTbl"></div></div>
+    </div>
+  </section>
+
+  <footer>All data is synthetic and created for a case-study exercise. Engine: <code>src/engine.js</code> (plain JavaScript, no dependencies). Built with AI-assisted development and validated against labeled holdout and blind test sets.</footer>
+</div>
+
+<script src="src/engine.js"></script>
+<script src="data/data.js"></script>
+<script>
+(function(){
+  const E = window.ApptEngine;
+  const $ = id => document.getElementById(id);
+  const P = (v, d = 1) => (v * 100).toFixed(d) + '%';
+  const N = v => Math.round(v).toLocaleString('en-US');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const L = E.INTENT_LABELS;
+  let rows = E.parseCSV(window.APPT_DATA.interactions);
+  const sets = { blind: E.parseCSV(window.APPT_DATA.blind), challenge: E.parseCSV(window.APPT_DATA.challenge) };
+  let report;
+
+  // ---------- tabs ----------
+  const tabs = [...document.querySelectorAll('nav button')];
+  function show(view){
+    tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.view === view));
+    document.querySelectorAll('section[role=tabpanel]').forEach(s => s.hidden = s.id !== 'v-' + view);
+    try { localStorage.setItem('arc-tab', view); } catch (e) {}
+  }
+  tabs.forEach(b => b.addEventListener('click', () => { show(b.dataset.view); history.replaceState(null, '', '#' + b.dataset.view); }));
+
+  const pillFor = c => c >= .45 ? 'good' : c >= .25 ? 'warn' : 'bad';
+  const kpi = (label, value, note) => `<div class="kpi"><small>${label}</small><b>${value}</b>${note ? `<small>${note}</small>` : ''}</div>`;
+
+  // ---------- charts ----------
+  function weekChart(byWeek){
+    const W = 520, H = 220, l = 40, r = 12, t = 14, b = 34;
+    const xs = i => l + i * (W - l - r) / Math.max(1, byWeek.length - 1);
+    const y = v => t + (1 - v / 0.6) * (H - t - b);
+    const pts = byWeek.map((g, i) => [xs(i), y(g.containment)]);
+    const min = byWeek.reduce((m, g) => g.containment < m.containment ? g : m, byWeek[0]);
+    const avg = report.kpis.containment;
+    let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Weekly containment">`;
+    [0, .2, .4, .6].forEach(v => s += `<line x1="${l}" x2="${W - r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${l - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)">${v * 100}%</text>`);
+    s += `<line x1="${l}" x2="${W - r}" y1="${y(avg)}" y2="${y(avg)}" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="${W - r}" y="${y(avg) - 6}" text-anchor="end" font-size="11" fill="var(--muted)">Q3 avg ${P(avg)}</text>`;
+    s += `<path d="M${pts.map(p => p.join(' ')).join('L')}L${pts.at(-1)[0]} ${y(0)}L${pts[0][0]} ${y(0)}Z" fill="var(--accent)" fill-opacity=".1"/>`;
+    s += `<polyline points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="var(--accent)" stroke-width="2"/>`;
+    byWeek.forEach((g, i) => {
+      const isMin = g === min;
+      s += `<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="${isMin ? 5 : 3}" fill="${isMin ? 'var(--bad)' : 'var(--accent)'}"><title>Week of ${g.key}: ${P(g.containment)} of ${g.total} contacts</title></circle>`;
+      if (i % 2 === 0 || isMin) s += `<text x="${pts[i][0]}" y="${H - 14}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${g.key.slice(5)}</text>`;
+    });
+    const mi = byWeek.indexOf(min);
+    s += `<text x="${pts[mi][0] + 8}" y="${pts[mi][1] + 16}" font-size="11.5" font-weight="600" fill="var(--bad)">${P(min.containment)} · slot-service incident</text>`;
+    return s + `<text x="${l}" y="${H - 1}" font-size="10.5" fill="var(--muted)">Week starting (MM-DD), 2026</text></svg>`;
+  }
+  function failChart(list){
+    const W = 520, row = 26, l = 230, H = list.length * row + 30, max = Math.max(...list.map(f => f.count));
+    let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Failure reasons">`;
+    list.forEach((f, i) => {
+      const y0 = 8 + i * row, wT = (f.transferred / max) * (W - l - 70), wA = (f.abandoned / max) * (W - l - 70);
+      s += `<text x="${l - 8}" y="${y0 + 14}" text-anchor="end" font-size="11.5" fill="var(--ink)">${esc(f.reason.length > 34 ? f.reason.slice(0, 33) + '…' : f.reason)}</text>`;
+      s += `<rect x="${l}" y="${y0 + 3}" width="${wT}" height="16" fill="${i === 0 ? 'var(--accent)' : 'var(--bar)'}"><title>${esc(f.reason)}: ${f.transferred} transferred</title></rect>`;
+      s += `<rect x="${l + wT}" y="${y0 + 3}" width="${wA}" height="16" fill="${i === 0 ? 'var(--accent)' : 'var(--bar)'}" fill-opacity=".45"><title>${esc(f.reason)}: ${f.abandoned} abandoned</title></rect>`;
+      s += `<text x="${l + wT + wA + 6}" y="${y0 + 15}" font-size="11.5" fill="var(--muted)">${f.count} · ${P(f.shareOfFailures, 0)}</text>`;
+    });
+    return s + `<text x="${l}" y="${H - 4}" font-size="10.5" fill="var(--muted)">Solid = transferred to agent · light = abandoned</text></svg>`;
+  }
+  const statTable = (list, keyLabel, nameFn) => `<table><thead><tr><th>${keyLabel}</th><th class="n">Contacts</th><th class="n">Contained</th><th class="n">Transfer</th><th class="n">Abandon</th><th class="n">CSAT</th></tr></thead><tbody>${list.map(g => `<tr><td>${esc(nameFn(g.key))}</td><td class="n">${N(g.total)}</td><td class="n"><span class="pill ${pillFor(g.containment)}">${P(g.containment)}</span></td><td class="n">${P(g.transferRate)}</td><td class="n">${P(g.abandonRate)}</td><td class="n">${g.csat ? g.csat.toFixed(2) : '–'}</td></tr>`).join('')}</tbody></table>`;
+
+  // ---------- report ----------
+  function renderReport(){
+    report = E.buildReport(rows, assumptions());
+    const k = report.kpis;
+    $('kpis').innerHTML = kpi('Contacts analyzed', N(k.total), 'missed / reschedule journeys') + kpi('Digital containment', P(k.containment), 'resolved without an agent') +
+      kpi('Transferred to agent', P(k.transferRate), N(k.transferred) + ' contacts') + kpi('Abandoned', P(k.abandonRate), N(k.abandoned) + ' contacts') +
+      kpi('Agent hours consumed', N(k.agentHours), k.avgAgentHandleMin.toFixed(1) + ' min per transfer') + kpi('CSAT digital vs agent', k.csatDigital.toFixed(1) + ' / ' + k.csatAssisted.toFixed(1), 'abandoned: ' + k.csatAbandoned.toFixed(1));
+    $('insights').innerHTML = report.insights.map(i => `<li>${esc(i)}</li>`).join('');
+    $('weekChart').innerHTML = weekChart(report.byWeek);
+    $('failChart').innerHTML = failChart(report.failuresByReason);
+    $('intentTbl').innerHTML = statTable(report.byIntent, 'Contact reason', k => L[k] || k);
+    $('channelTbl').innerHTML = statTable(report.byChannel, 'Channel', k => k);
+    renderRepeat(); renderMix(); renderImpact();
+  }
+  function reportMarkdown(){
+    const k = report.kpis;
+    return [`# Appointment Resolution — Performance Report`, '', `Contacts: ${N(k.total)} · Containment ${P(k.containment)} · Transfer ${P(k.transferRate)} · Abandon ${P(k.abandonRate)}`, '',
+      '## Findings', ...report.insights.map(i => '- ' + i), '', '## Failure reasons', '| Reason | Count | Share |', '|---|---:|---:|',
+      ...report.failuresByReason.map(f => `| ${f.reason} | ${f.count} | ${P(f.shareOfFailures)} |`), '', '## Contact reasons', '| Reason | Contacts | Containment |', '|---|---:|---:|',
+      ...report.byIntent.map(g => `| ${L[g.key] || g.key} | ${g.total} | ${P(g.containment)} |`)].join('\n');
+  }
+  async function copyText(text, msgEl, box){
+    try { await navigator.clipboard.writeText(text); msgEl.textContent = 'Copied'; }
+    catch (e) { if (box) { box.hidden = false; box.value = text; box.select(); } msgEl.textContent = 'Select and copy the text below'; }
+  }
+  $('copyReport').addEventListener('click', () => copyText(reportMarkdown(), $('copyMsg'), $('reportMd')));
+  $('fileIn').addEventListener('change', e => {
+    const f = e.target.files[0]; if (!f) return;
+    const rd = new FileReader();
+    rd.onload = () => { try { const r = E.parseCSV(rd.result); if (!r.length || !('self_service_outcome' in r[0])) throw 0; rows = r; $('dataTag').textContent = f.name + ' · ' + N(r.length) + ' rows'; renderReport(); }
+      catch (err) { $('dataTag').textContent = 'That file is missing the expected columns. See README for the schema.'; } };
+    rd.readAsText(f);
+  });
+  $('resetData').addEventListener('click', () => { rows = E.parseCSV(window.APPT_DATA.interactions); $('dataTag').textContent = 'Synthetic sample · Q3 2026'; renderReport(); });
+
+  // ---------- classifier ----------
+  function runCls(){
+    const p = E.classify($('utt').value);
+    $('clsOut').innerHTML = `<div class="eyebrow">Predicted contact reason</div><b>${esc(p.label)}</b>
+      <div class="row" style="margin-top:6px"><span class="pill ${p.intent === 'NEEDS_REVIEW' ? 'warn' : 'good'}">confidence ${p.confidence.toFixed(2)}</span>
+      <span class="mono">route: ${p.intent === 'NEEDS_REVIEW' ? 'human review / LLM tier' : 'agentic flow · ' + p.intent}</span></div>
+      ${p.evidence.length ? `<div class="mono" style="margin-top:6px;color:var(--muted)">evidence: ${p.evidence.map(esc).join(' · ')}</div>` : ''}`;
+  }
+  $('runCls').addEventListener('click', runCls);
+  document.querySelectorAll('.ex').forEach(b => b.addEventListener('click', () => { $('utt').value = b.textContent; runCls(); }));
+  let batchRes = [];
+  function runBatch(){
+    batchRes = $('batchIn').value.split('\n').map(s => s.trim()).filter(Boolean).map(t => ({ t, p: E.classify(t) }));
+    $('batchOut').innerHTML = `<table><thead><tr><th>Message</th><th>Reason</th><th class="n">Conf.</th></tr></thead><tbody>${batchRes.map(r => `<tr><td>${esc(r.t)}</td><td>${esc(r.p.label)}</td><td class="n">${r.p.confidence.toFixed(2)}</td></tr>`).join('')}</tbody></table>`;
+  }
+  $('runBatch').addEventListener('click', runBatch);
+  $('copyBatch').addEventListener('click', () => copyText(['message,predicted_reason,confidence', ...batchRes.map(r => `"${r.t.replace(/"/g, '""')}",${r.p.intent},${r.p.confidence}`)].join('\n'), $('batchMsg')));
+  function renderMix(){
+    const m = {};
+    rows.forEach(r => { const p = E.classify(r.customer_utterance).intent; m[p] = m[p] || { n: 0, agree: 0 }; m[p].n++; if (p === r.true_contact_reason) m[p].agree++; });
+    $('mixTbl').innerHTML = `<table><thead><tr><th>Predicted reason</th><th class="n">Contacts</th><th class="n">Share</th><th class="n">Agrees with label</th></tr></thead><tbody>${Object.entries(m).sort((a, b) => b[1].n - a[1].n).map(([k, v]) => `<tr><td>${esc(L[k])}</td><td class="n">${N(v.n)}</td><td class="n">${P(v.n / rows.length)}</td><td class="n">${k === 'NEEDS_REVIEW' ? '–' : P(v.agree / v.n)}</td></tr>`).join('')}</tbody></table>`;
+  }
+
+  // ---------- repeat ----------
+  function renderRepeat(){
+    const R = report.repeat;
+    $('repKpis').innerHTML = kpi('Repeat contacts (7 days)', N(R.repeatContacts)) + kpi('Repeat rate after digital success', P(R.repeatRateAfterSuccess)) +
+      kpi('Repeat rate after digital failure', P(R.repeatRateAfterFailure), (R.repeatRateAfterFailure / R.repeatRateAfterSuccess).toFixed(1) + '× higher') + kpi('Customers flagged', N(R.chains.length), '2+ failures in 14 days');
+    $('patTbl').innerHTML = `<table><thead><tr><th>Pattern</th><th class="n">Occurrences</th></tr></thead><tbody>${R.patterns.slice(0, 12).map(p => `<tr><td>${esc(p.pattern)}</td><td class="n">${p.count}</td></tr>`).join('')}</tbody></table>`;
+    $('chainCount').textContent = N(R.chains.length) + ' in total';
+    $('chainTbl').innerHTML = `<table><thead><tr><th>Customer</th><th class="n">Failures</th><th>Reasons</th><th>Open</th></tr></thead><tbody>${R.chains.slice(0, 25).map(c => `<tr><td class="mono">${esc(c.customer_id)}</td><td class="n">${c.digital_failures}</td><td>${esc(c.reasons)}</td><td><span class="pill ${c.still_unresolved === 'Y' ? 'bad' : 'good'}">${c.still_unresolved === 'Y' ? 'yes' : 'no'}</span></td></tr>`).join('')}</tbody></table>`;
+  }
+  $('copyChains').addEventListener('click', () => copyText(['customer_id,contacts,digital_failures,reasons,intent,last_contact,still_unresolved', ...report.repeat.chains.map(c => [c.customer_id, c.contacts, c.digital_failures, `"${c.reasons}"`, c.intent, c.last_contact, c.still_unresolved].join(','))].join('\n'), $('chainMsg')));
+
+  // ---------- validation ----------
+  function renderValidation(){
+    const which = $('setSel').value;
+    const data = which === 'holdout' ? E.split(rows).holdout : sets[which];
+    const v = E.validate(data);
+    $('valKpis').innerHTML = kpi('Messages tested', N(v.n)) + kpi('Overall accuracy', P(v.accuracy), 'review counted as a miss') + kpi('Precision when automated', P(v.accuracyOnAuto), 'wrong auto-routes avoided') + kpi('Sent to human review', P(v.reviewRate), 'coverage gap');
+    $('pcTbl').innerHTML = `<table><thead><tr><th>Intent</th><th class="n">n</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th></tr></thead><tbody>${v.perClass.map(c => `<tr><td>${esc(L[c.intent])}</td><td class="n">${c.support}</td><td class="n">${P(c.precision, 0)}</td><td class="n">${P(c.recall, 0)}</td><td class="n">${c.f1.toFixed(2)}</td></tr>`).join('')}</tbody></table>`;
+    const ab = { RESCHEDULE: 'RES', MISSED_TECH_NOSHOW: 'NOS', MISSED_CUSTOMER_NOT_HOME: 'CNH', ETA_STATUS: 'ETA', CANCEL: 'CAN', ACCESS_UPDATE: 'ACC', NEEDS_REVIEW: 'REV' };
+    const cols = v.labels.concat('NEEDS_REVIEW');
+    $('cmTbl').innerHTML = `<table class="cm"><thead><tr><th></th>${cols.map(c => `<th>${ab[c]}</th>`).join('')}</tr></thead><tbody>${cols.map(r => `<tr><th>${ab[r]}</th>${cols.map(c => { const n = v.confusion[r][c]; return `<td class="${n ? (r === c ? 'diag' : 'off') : ''}">${n || '·'}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
+    const miss = data.map(r => ({ r, p: E.classify(r.customer_utterance) })).filter(x => x.p.intent !== x.r.true_contact_reason).slice(0, 20);
+    $('missTbl').innerHTML = miss.length ? `<table><thead><tr><th>Message</th><th>True reason</th><th>Classifier</th></tr></thead><tbody>${miss.map(x => `<tr><td>${esc(x.r.customer_utterance)}</td><td>${esc(L[x.r.true_contact_reason])}</td><td>${esc(L[x.p.intent])}</td></tr>`).join('')}</tbody></table>` : '<p class="note">No misses on this set.</p>';
+  }
+  $('setSel').addEventListener('change', renderValidation);
+
+  // ---------- impact ----------
+  const base = E.DEFAULT_ASSUMPTIONS;
+  const ctl = { aCost: base.agentCostPerMin, aMult: base.sampleToQuarterMultiplier, aDig: base.digitalCostPerContact, aScale: 1 };
+  Object.entries(ctl).forEach(([id, v]) => { $(id).value = v; $(id).addEventListener('input', () => { renderReport(); }); });
+  function assumptions(){
+    const s = +$('aScale').value;
+    const addressable = Object.fromEntries(Object.entries(base.addressable).map(([k, v]) => [k, Math.min(1, v * s)]));
+    $('aCostV').textContent = '$' + (+$('aCost').value).toFixed(2); $('aMultV').textContent = '×' + $('aMult').value; $('aDigV').textContent = '$' + (+$('aDig').value).toFixed(2); $('aScaleV').textContent = '×' + s.toFixed(2);
+    return { agentCostPerMin: +$('aCost').value, sampleToQuarterMultiplier: +$('aMult').value, digitalCostPerContact: +$('aDig').value, addressable };
+  }
+  function renderImpact(){
+    const o = report.opportunity;
+    $('impCont').textContent = P(report.kpis.containment, 0) + ' → ' + P(o.projectedContainment, 0);
+    $('impTr').textContent = N(o.avoidedTransfersAnnual);
+    $('impSav').textContent = '$' + (o.annualSavings / 1e6).toFixed(2) + 'M';
+    $('impTbl').innerHTML = `<table><thead><tr><th>Failure type</th><th class="n">Fix rate</th><th class="n">Recovered</th><th class="n">$ / yr</th></tr></thead><tbody>${report.failuresByReason.map(f => `<tr><td>${esc(f.reason)}</td><td class="n">${P(f.addressableShare, 0)}</td><td class="n">${N(f.recoveredContacts)}</td><td class="n">$${N(f.annualSavings / 1000)}k</td></tr>`).join('')}</tbody></table>`;
+  }
+
+  renderReport(); runCls(); runBatch(); renderValidation();
+  let start = (location.hash || '').slice(1);
+  if (!tabs.some(b => b.dataset.view === start)) { try { start = localStorage.getItem('arc-tab') || 'report'; } catch (e) { start = 'report'; } }
+  show(start);
+  window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (tabs.some(b => b.dataset.view === v)) show(v); });
+})();
+</script>
